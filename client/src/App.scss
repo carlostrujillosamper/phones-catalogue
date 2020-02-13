@@ -1,0 +1,157 @@
+$colors: (
+  border: #808080,
+  border-light: lighten(#808080, 30%),
+  loader: #3498db,
+  loader-light: lighten(#3498db, 30%) 
+);
+
+@function color($color-name) {
+  @return map-get($colors, $color-name);
+}
+
+$desktop: 992px;
+$tablet: 768px;
+
+@mixin desktop {
+  @media (min-width: #{$desktop}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$tablet}) {
+    @content;
+  }
+}
+
+.phone-list {
+  margin: 2vh 5vw;
+  ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    justify-content: space-around;
+    grid-gap: 2vh;
+  }
+  @include desktop {
+    li {
+      transition: box-shadow 0.3s;
+    }
+    li:hover {
+      box-shadow: 0px 7px 11px -1px rgba(128, 128, 128, 0.5);
+      transition: box-shadow 0.3s;
+    }
+  }
+
+  .phone-card {
+    display: grid;
+    grid-template-rows: 3fr 1fr;
+    height: 47vh;
+    border: 1px solid;
+    border-color: color(border-light);
+    border-radius: 15px;
+
+    @include desktop {
+      border: 0px;
+    }
+  }
+
+  .card-img-box {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    img {
+      height: 30vh;
+    }
+  }
+
+  h2 {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+  }
+}
+
+.phone-info {
+  display: grid;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+
+  @include desktop {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .phone-info-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    @include desktop {
+      height: 75vh;
+    }
+    img {
+      height: 90%;
+    }
+  }
+  .phone-info-table {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    padding: 0 8vw;
+    height: 50vh;
+    line-height: 1.4rem;
+
+    @include tablet {
+      font-size: 1.8rem;
+      line-height: 2rem;
+      padding: 0 10vw;
+    }
+
+    @include desktop {
+      font-size: 2rem;
+      height: 80vh;
+      padding: 0;
+      padding-right: 5vw;
+    }
+
+    td span {
+      font-weight: 700;
+    }
+    tr {
+      display: grid;
+      grid-template-columns: 2fr 3fr;
+      grid-gap: 2vw;
+      padding: 0.35vh 0;
+
+      @include desktop {
+        padding: 1.2vh 0;
+      }
+    }
+  }
+}
+
+.loading-page {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .loader{
+    border: 16px solid color(loader); 
+    border-top: 16px solid color(loader-light);
+    border-radius: 50%; 
+    width: 120px;
+    height: 120px;
+    animation: loader-spin infinite 2s linear infinite;
+  }
+  @keyframes loader-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+}
