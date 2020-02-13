@@ -7,7 +7,6 @@ import { useParams } from 'react-router-dom'
 
 function App(){
 
-  const {id} = useParams()
 
 
   return(
@@ -19,9 +18,9 @@ function App(){
      <Route path='/:id'>
      <PhoneDetail></PhoneDetail>
      </Route>
-     {id ?null: <div className='default-message'>
+      <div className='default-message'>
       <h3>SELECT A PHONE FROM THE LIST ABOVE</h3>
-    </div>}
+    </div>
      
      </React.Fragment>
   )

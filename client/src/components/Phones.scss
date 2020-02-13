@@ -24,12 +24,13 @@ $tablet: 768px;
   }
 }
 .phone-selector-wrapper {
-  margin-top:1.8rem ;
+  margin-top:1rem ;
   display: flex;
   justify-content: space-evenly;
 }
 
 .select-phone {
+  padding: 1rem;
   border-style: solid;
   border-width: 2px ;
   border-color:black;
