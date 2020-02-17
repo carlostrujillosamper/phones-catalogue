@@ -1,4 +1,4 @@
-# phones-catalogue
+# Phone Catalogue
 
 
 React Redux Hooks Phones-catalogue exercise (Server created with Node)
@@ -26,8 +26,8 @@ PORT=5000
 ENV=development
 
 ```
+## Instructions
 
-# Phone Catalogue
 Your task is to write a very simple product catalogue app.
 
 1. Write a simple REST API in whatever language you're most comfortable (NodeJS, Rails, Java...) that...
