@@ -8,7 +8,7 @@ React Redux Hooks Phones-catalogue exercise (Server created with Node)
 npm install
 docker-compose up
 ```
-** navigate to ./client and then run tests**
+**navigate to ./client and then run tests**
 ```
 npm test
 ```
