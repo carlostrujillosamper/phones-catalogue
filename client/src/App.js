@@ -11,16 +11,18 @@ function App(){
 
   return(
     <React.Fragment>
-    
-    <Route path='/'>
-    <PhoneList></PhoneList>
-    </Route>
-     <Route path='/:id'>
-     <PhoneDetail></PhoneDetail>
-     </Route>
-      <div className='default-message'>
+      <PhoneList></PhoneList>
+    <Switch>
+    <Route exact path='/'>
+    <div className='default-message'>
       <h3>SELECT A PHONE FROM THE LIST ABOVE</h3>
     </div>
+    </Route>
+     <Route exact path='/:id'>
+     <PhoneDetail></PhoneDetail>
+     </Route>
+     </Switch>
+     
      
      </React.Fragment>
   )
