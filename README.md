@@ -34,7 +34,7 @@ API_HOST=http://localhost:3000
 APP_SERVER_PORT=5000
 REACT_APP_PORT=3000
 ```
-** ./server .env**
+**./server .env**
 
 ```
 PORT=5000
