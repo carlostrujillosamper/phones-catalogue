@@ -13,7 +13,7 @@ docker-compose up
 
 **navigate to ./client and then run tests**
 ```
-npm i 
+
 npm test
 ```
 **./client run without docker**
