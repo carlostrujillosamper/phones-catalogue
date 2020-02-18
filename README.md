@@ -5,7 +5,8 @@ React Redux Hooks Phones-catalogue exercise (Server created with Node)
 
 **Clone the repo locally and then run docker**
 ```
-
+npm i (./server)
+npm i (./client)
 docker-compose up
 ```
 **Go to http://localhost:3000/ on web browser**
@@ -22,7 +23,7 @@ npm test
  ```
  **./server run without docker**
  ```
- npm i
+ 
  npm run dev
 
  ```
